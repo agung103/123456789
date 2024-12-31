@@ -1,0 +1,92 @@
+/* Reset margin dan padding untuk elemen dasar */
+body, h1, input {
+    margin: 0;
+    padding: 0;
+}
+
+/* Mengatur tampilan halaman */
+body {
+    background-color: #f2f2f2;  /* Warna latar belakang */
+    font-family: 'Arial', sans-serif;  /* Menggunakan font Arial */
+    display: flex;  /* Menggunakan Flexbox untuk menyusun elemen secara fleksibel */
+    justify-content: center;  /* Menempatkan elemen di tengah secara horizontal */
+    align-items: center;  /* Menempatkan elemen di tengah secara vertikal */
+    height: 100vh;  /* Mengatur tinggi layar agar konten memenuhi seluruh layar */
+    text-align: center;  /* Semua teks di tengah */
+}
+
+/* Kontainer utama */
+.container {
+    width: 100%;
+    max-width: 700px;  /* Menambahkan lebar maksimum agar tidak terlalu besar */
+    padding: 20px;
+}
+
+/* Styling untuk logo */
+.logo img {
+    width: 272px;  /* Ukuran logo Google */
+    margin-bottom: 20px;  /* Memberikan jarak bawah pada logo */
+}
+
+/* Styling untuk kotak pencarian */
+.search-box {
+    display: flex;  /* Menggunakan Flexbox untuk menata elemen input dan tombol */
+    justify-content: center;  /* Menempatkan elemen secara horizontal di tengah */
+    margin-top: 20px;
+}
+
+/* Styling untuk input teks pencarian */
+.search-box input[type="text"] {
+    width: 600px;  /* Lebar input */
+    height: 40px;  /* Tinggi input */
+    padding: 0 10px;  /* Padding dalam input */
+    font-size: 16px;  /* Ukuran font */
+    border: 1px solid #ccc;  /* Border abu-abu terang */
+    border-radius: 24px;  /* Membuat sudut border menjadi bulat */
+    outline: none;  /* Menghilangkan outline biru ketika input fokus */
+    transition: 0.3s;  /* Efek transisi ketika fokus */
+}
+
+/* Efek ketika input mendapatkan fokus */
+.search-box input[type="text"]:focus {
+    border-color: #4285f4;  /* Mengubah warna border saat input fokus */
+}
+
+/* Tombol pencarian */
+.search-btn {
+    background-color: #4285f4;  /* Warna tombol biru seperti Google */
+    color: white;  /* Teks berwarna putih */
+    padding: 10px 20px;  /* Padding dalam tombol */
+    margin-left: 10px;  /* Memberikan jarak antara input dan tombol */
+    border: none;  /* Menghilangkan border default tombol */
+    border-radius: 24px;  /* Membuat sudut tombol menjadi bulat */
+    font-size: 16px;  /* Ukuran font tombol */
+    cursor: pointer;  /* Menampilkan pointer saat hover */
+    transition: 0.3s;  /* Efek transisi pada tombol */
+}
+
+/* Efek hover pada tombol pencarian */
+.search-btn:hover {
+    background-color: #357ae8;  /* Mengubah warna tombol saat dihover */
+}
+
+/* Styling untuk tombol lainnya (seperti Google Search dan I'm Feeling Lucky) */
+.other-buttons {
+    margin-top: 20px;
+}
+
+/* Tombol lainnya seperti Google Search dan Feeling Lucky */
+.other-buttons button {
+    background-color: #f8f8f8;  /* Warna latar belakang tombol */
+    border: 1px solid #dcdcdc;  /* Border abu-abu terang */
+    padding: 10px 20px;  /* Padding tombol */
+    margin: 5px;  /* Jarak antar tombol */
+    border-radius: 5px;  /* Sudut tombol bulat */
+    cursor: pointer;  /* Menampilkan pointer saat hover */
+    font-size: 14px;  /* Ukuran font tombol */
+}
+
+/* Efek hover pada tombol lainnya */
+.other-buttons button:hover {
+    background-color: #f1f1f1;  /* Mengubah warna tombol saat hover */
+}

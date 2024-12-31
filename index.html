@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Google</title>
+    <style>
+        /* Reset margin dan padding */
+        body, h1, input {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set body background dan font */
+        body {
+            background-color: #f2f2f2;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Kontainer utama */
+        .container {
+            text-align: center;
+        }
+
+        /* Logo dan teks di atas */
+        .logo img {
+            width: 272px; /* Ukuran logo */
+            margin-bottom: 20px;
+        }
+
+        /* Form pencarian */
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .search-box input[type="text"] {
+            width: 600px;
+            height: 40px;
+            padding: 0 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 24px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .search-box input[type="text"]:focus {
+            border-color: #4285f4;
+        }
+
+        /* Tombol pencarian */
+        .search-btn {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 24px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #357ae8;
+        }
+
+        /* Tombol lainnya */
+        .other-buttons {
+            margin-top: 20px;
+        }
+
+        .other-buttons button {
+            background-color: #f8f8f8;
+            border: 1px solid #dcdcdc;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .other-buttons button:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Logo Google -->
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google Logo">
+        </div>
+
+        <!-- Form Pencarian -->
+        <div class="search-box">
+            <input type="text" id="search-query" placeholder="Cari di Google">
+            <button class="search-btn" onclick="searchGoogle()">Cari</button>
+        </div>
+
+        <!-- Tombol Lainnya -->
+        <div class="other-buttons">
+            <button onclick="searchGoogle()">Google Search</button>
+            <button onclick="searchGoogle('Saya merasa beruntung')">I'm Feeling Lucky</button>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk melakukan pencarian ke Google
+        function searchGoogle(query = null) {
+            let searchQuery = query || document.getElementById('search-query').value;
+            if (searchQuery) {
+                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+            }
+        }
+    </script>
+
+</body>
